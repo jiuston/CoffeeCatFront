@@ -1,0 +1,15 @@
+<table>
+    <th>ID</th>
+    <th>Nombre</th>
+    <th>Sexo</th>
+    <th>Adoptado</th>
+    <tr *ngFor="let gato of gatos">
+        <td>
+            <a routerLink="/gatos/detail/{{gato.id}}">{{gato.id}}</a>
+        </td>
+        <td>{{gato.nombre}}</td>
+        <td>{{gato.sexo}}</td>
+        <td>{{gato.adoptado}}</td>
+    </tr>
+</table>
+<button routerLink="/gatos/add">Añadir nuevo gato</button>

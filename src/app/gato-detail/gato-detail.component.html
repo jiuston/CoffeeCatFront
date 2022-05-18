@@ -1,0 +1,12 @@
+<div *ngIf="gato" class="login">
+    <h2>Informacion de {{gato.nombre}}</h2>
+    <form class="custom-form" method="post">
+        <input type="text" [(ngModel)]="gato.nombre" name="nombre" required="required" />
+        <input type="text" [(ngModel)]="gato.sexo" name="sexo" required="required" />
+        <input type="text" [(ngModel)]="gato.historia" name="historia" required="required" />
+        <input type="text" [(ngModel)]="gato.fecha_nacimiento" name="fecha_nacimiento" />
+        <p *ngIf="gato.adoptado==false">No adoptado</p>
+        <p *ngIf="gato.adoptado">Adoptado</p>
+        <button type="submit" (click)="save(gato)">Guardar datos</button>
+    </form>
+</div>
